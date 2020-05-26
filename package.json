@@ -22,8 +22,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "babel-preset-stage-1": "^6.1.18",
-    "loadash": "^1.0.0",
-    "lodash": "^3.10.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-paginate": "^6.3.2",
