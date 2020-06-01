@@ -11,7 +11,10 @@ function Footer() {
                         <div className="col-lg-12 text-center">
                            <p>Get Latest update of COVID-19</p>
                         </div>
-                        <div>ayorinde223@gmail.com</div>
+                        
+                     </div>
+                     <div className="footerFloat">
+                           ayorinde223@gmail.com
                      </div>
                   </div>
                </div>
