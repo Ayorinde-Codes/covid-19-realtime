@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 export default class CountryStatus extends Component {
+  _isMounted = false;
+
   
   constructor(props){
       super(props);
@@ -10,11 +12,19 @@ export default class CountryStatus extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
+
     axios.get(`https://coronavirus-19-api.herokuapp.com/countries/${this.props.country}`)
       .then(res => {
+        if (this._isMounted) {
         const countryState = res.data;
         this.setState({countryState });
+        }
       })
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {
